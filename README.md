@@ -342,3 +342,163 @@ namespace AdminSpace
         }
     }
 }
+ГЕНЕРАТОР ПАРОЛЕЙ 10 ПРАКТИЧЕСКАЯ
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KravVas
+{
+    class PasswordRandomizer
+    {
+
+
+
+        public string a, b;
+        int choice = 0;
+        int PasswordLength = 0;
+        Random rnd = new Random( );
+        public string ObjectNums1, ObjectLetters2, ObjectSymbols3, ObjectLettersNums4, ObjectLettersSymbols5, ObjectSymbolsNums6, ObjectLettersNumsSymbols7;
+        string hash = ("##################################################################################");
+        public string[] Letters = {"A", "B", "C", "D" ,"E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        public string[] Nums = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+        public string[] Symbols = {"!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "=", "_", "+", "/", "?", "<", ">", ";", ":", "|", ",", "."};
+        public string[] LettersNums = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+        public string[] LettersSymbols = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "=", "_", "+", "/", "?", "<", ">", ";", ":", "|", ",", "." };
+        public string[] SymbolsNums = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "=", "_", "+", "/", "?", "<", ">", ";", ":", "|", ",", ".", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+        public string[] LettersNumsSymbols = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "=", "_", "+", "/", "?", "<", ">", ";", ":", "|", ",", ".", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        public string[] Result;
+
+
+        public void Check()
+        {
+
+
+            Console.Write("Введите длину пароля: ");
+            a = Console.ReadLine();
+            while (!Int32.TryParse(a, out PasswordLength))
+            {
+                Console.WriteLine(hash);
+                Console.WriteLine("Это не число! Попробуйте заново");
+                Console.WriteLine(hash);
+                Console.Write("Введите длину пароля: ");
+                a = Console.ReadLine();
+            }
+
+
+        }
+
+
+        public void PasswordRandomizerMain()
+        {
+
+
+            Console.WriteLine($"1)Только из цифр\n2)Только из букв\n3)Из цифр и букв\n4)Только из символов\n5))Из цифр и символов\n6)Из букв и символов\n7)Из букв, цифр и символов");
+            Console.WriteLine(hash);
+            Console.Write("Ваш выбор: ");
+            choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(hash);
+            if (choice == 1)
+            {
+
+                for (int i = 0; i == PasswordLength, i++)
+                {
+                    ObjectNums1 = Letters[rnd.Next(0, Letters.Length)];
+                    Result[i] = ObjectNums1;
+                }
+
+            }
+            else if (choice == 2)
+            {
+
+                for (int i = 0; i == PasswordLength, i++)
+                {
+                    ObjectLetters2 = Nums[rnd.Next(0, Nums.Length)];
+                    Result[i] = ObjectLetters2;
+                }
+
+            }
+            else if (choice == 3)
+            {
+
+                for (int i = 0; i == PasswordLength, i++)
+                {
+                    ObjectLettersNums = Nums[rnd.Next(0, Nums.Length)];
+                    Result[i] = ObjectLetters;
+                }
+
+            }
+            else if (choice == 4)
+            {
+
+                for (int i = 0; i == PasswordLength, i++)
+                {
+                    ObjectLetters = Nums[rnd.Next(0, Nums.Length)];
+                    Result[i] = ObjectLetters;
+                }
+
+            }
+            else if (choice == 5)
+            {
+
+                for (int i = 0; i == PasswordLength, i++)
+                {
+                    ObjectLetters = Nums[rnd.Next(0, Nums.Length)];
+                    Result[i] = ObjectLetters;
+                }
+
+            }
+            else if (choice == 6)
+            {
+
+                for (int i = 0; i == PasswordLength, i++)
+                {
+                    ObjectLetters = Nums[rnd.Next(0, Nums.Length)];
+                    Result[i] = ObjectLetters;
+                }
+
+            }
+            else if (choice == 7)
+            {
+
+                for (int i = 0; i == PasswordLength, i++)
+                {
+                    ObjectLetters = Nums[rnd.Next(0, Nums.Length)];
+                    Result[i] = ObjectLetters;
+                }
+
+            }
+                
+            
+        }
+        
+
+        public void LettersPass()
+        {
+
+            ObjectLetters = Letters[rnd.Next(0, Letters.Length)];
+            Result[i] = ObjectLetters;
+
+        }
+
+        public void NumsPass()
+        {
+
+            ObjectLetters = Nums[rnd.Next(0, Nums.Length)];
+            Result[i] = ObjectLetters;
+
+        }
+
+        public void SymbolsPass()
+        {
+
+            ObjectLetters = Symbols[rnd.Next(0, Symbols.Length)];
+            Result[i] = ObjectLetters;
+
+        }
+
+    }
+
+}
